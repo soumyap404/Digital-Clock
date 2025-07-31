@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(to right, #041b64, #bf0303);
+  background: linear-gradient(to right, #1d1af6, #d00000);
   color: white;
 }
 
@@ -21,25 +21,35 @@ body {
   color: #f0f0f0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 2s ease-in;
 }
 
 #clock {
   font-size: 48px;
   padding: 20px 60px;
   border-radius: 15px;
-  background: radial-gradient(circle, orange 0%, rgb(234, 180, 30) 100%);
-  box-shadow: 0 0 20px rgb(5, 4, 3);
-  color: #1c1c1c;
-  animation: glow 3s infinite alternate;
+  background: radial-gradient(circle, orange 0%, rgb(232, 178, 16) 100%);
+  box-shadow: 0 0 20px rgb(26, 25, 25);
+  color: #060404;
+  animation: glow 2s infinite alternate;
   transition: all 0.3s ease-in-out;
 }
 
+/* Animation for glow effect */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px orange;
+  }
+  to {
+    box-shadow: 0 0 35px darkorange;
+  }
+}
 
+/* Fade-in animation for banner */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
